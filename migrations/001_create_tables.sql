@@ -1,6 +1,3 @@
--- migrations/001_create_tables.sql
--- Run this file once to set up the blank database schema for gis_crystal
-
 CREATE DATABASE IF NOT EXISTS inventory_db;
 USE inventory_db;
 
