@@ -40,3 +40,19 @@ tr:hover {
 .btn-edit { background: #3b82f6; color: white; }
 .btn-view { background: #10b981; color: white; }
 </style>
+<div class="layout">
+<aside class="sidebar">
+    <div class="nav-section">Master Data</div>
+    <a class="nav-link" href="/gis_crystal/product_group/index.php"><i class="bi bi-tags"></i>Product Groups</a>
+    <a class="nav-link" href="/gis_crystal/unit_of_measure/index.php"><i class="bi bi-rulers"></i>Units of Measure</a>
+    <a class="nav-link" href="/gis_crystal/product/index.php"><i class="bi bi-box-seam"></i>Products</a>
+    <a class="nav-link" href="/gis_crystal/vendor/index.php"><i class="bi bi-truck"></i>Vendors</a>
+    <a class="nav-link" href="/gis_crystal/customer/index.php"><i class="bi bi-people"></i>Customers</a>
+    <div class="nav-section">Transactions</div>
+    <a class="nav-link" href="/gis_crystal/purchase/create.php"><i class="bi bi-cart-plus"></i>New Purchase</a>
+    <a class="nav-link" href="/gis_crystal/purchase/index.php"><i class="bi bi-cart3"></i>All Purchases</a>
+    <a class="nav-link" href="/gis_crystal/sales/create.php"><i class="bi bi-plus-circle"></i>New Sale</a>
+    <a class="nav-link" href="/gis_crystal/sales/index.php"><i class="bi bi-receipt"></i>All Sales</a>
+    <div class="nav-section">Reports</div>
+    <a class="nav-link" href="/gis_crystal/stock/index.php"><i class="bi bi-bar-chart-line"></i>Stock Overview</a>
+</aside>
