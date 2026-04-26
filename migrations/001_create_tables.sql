@@ -1,3 +1,6 @@
+-- migrations/001_create_tables.sql
+-- Run this file once to set up the blank database schema for gis_crystal
+
 CREATE DATABASE IF NOT EXISTS inventory_db;
 USE inventory_db;
 
@@ -14,7 +17,8 @@ CREATE TABLE IF NOT EXISTS units_of_measure (
     name VARCHAR(100) NOT NULL,
     code VARCHAR(20) NOT NULL,
     description TEXT,
-    status ENUM('active', 'inactive') DEFAULT 'active'
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS products (
@@ -23,6 +27,7 @@ CREATE TABLE IF NOT EXISTS products (
     description TEXT,
     unit_id INT,
     status ENUM('active', 'inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (unit_id) REFERENCES units_of_measure(id)
 );
 
@@ -30,14 +35,16 @@ CREATE TABLE IF NOT EXISTS vendors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
     description TEXT,
-    status ENUM('active', 'inactive') DEFAULT 'active'
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS customers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
     description TEXT,
-    status ENUM('active', 'inactive') DEFAULT 'active'
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS purchases (
