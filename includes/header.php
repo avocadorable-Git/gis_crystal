@@ -1,4 +1,6 @@
-<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
+<?php 
+require_once __DIR__ . '/../config/app.php';
+if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,18 +181,18 @@
 <div class="layout">
 <aside class="sidebar">
     <div class="nav-section">Master Data</div>
-    <a class="nav-link" href="/gis_crystal/product_group/index.php"><i class="bi bi-tags"></i>Product Groups</a>
-    <a class="nav-link" href="/gis_crystal/unit_of_measure/index.php"><i class="bi bi-rulers"></i>Units of Measure</a>
-    <a class="nav-link" href="/gis_crystal/product/index.php"><i class="bi bi-box-seam"></i>Products</a>
-    <a class="nav-link" href="/gis_crystal/vendor/index.php"><i class="bi bi-truck"></i>Vendors</a>
-    <a class="nav-link" href="/gis_crystal/customer/index.php"><i class="bi bi-people"></i>Customers</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/product_group/index.php"><i class="bi bi-tags"></i>Product Groups</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/unit_of_measure/index.php"><i class="bi bi-rulers"></i>Units of Measure</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/product/index.php"><i class="bi bi-box-seam"></i>Products</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/vendor/index.php"><i class="bi bi-truck"></i>Vendors</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/customer/index.php"><i class="bi bi-people"></i>Customers</a>
     <div class="nav-section">Transactions</div>
-    <a class="nav-link" href="/gis_crystal/purchase/create.php"><i class="bi bi-cart-plus"></i>New Purchase</a>
-    <a class="nav-link" href="/gis_crystal/purchase/index.php"><i class="bi bi-cart3"></i>All Purchases</a>
-    <a class="nav-link" href="/gis_crystal/sales/create.php"><i class="bi bi-plus-circle"></i>New Sale</a>
-    <a class="nav-link" href="/gis_crystal/sales/index.php"><i class="bi bi-receipt"></i>All Sales</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/purchase/index.php"><i class="bi bi-cart-plus"></i>New Purchase</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/purchase/index.php"><i class="bi bi-cart3"></i>All Purchases</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/sales/index.php"><i class="bi bi-plus-circle"></i>New Sale</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/sales/index.php"><i class="bi bi-receipt"></i>All Sales</a>
     <div class="nav-section">Reports</div>
-    <a class="nav-link" href="/gis_crystal/stock/index.php"><i class="bi bi-bar-chart-line"></i>Stock Overview</a>
+    <a class="nav-link" href="<?= BASE_URL ?>/stock/index.php"><i class="bi bi-bar-chart-line"></i>Stock Overview</a>
 </aside>
 
 <main class="main">
