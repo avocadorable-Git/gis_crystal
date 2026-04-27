@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 
 $errors = [];
 $customer_id = 0;
@@ -56,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Sale</div><div class="page-subtitle">Create a new sales invoice</div></div>

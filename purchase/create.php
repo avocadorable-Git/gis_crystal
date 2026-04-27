@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 
 $errors=[];
 $vendor_id=0;$purchase_date=date('Y-m-d');
@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         }
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Purchase</div><div class="page-subtitle">Record a stock purchase from a vendor</div></div>
