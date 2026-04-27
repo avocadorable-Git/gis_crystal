@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 $errors=[];$name=$description=$status='';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
     $name=trim($_POST['name']??'');$description=trim($_POST['description']??'');$status=$_POST['status']??'';
@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         else $errors[]="DB error."; $stmt->close();
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Product Group</div></div>
