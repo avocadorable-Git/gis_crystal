@@ -100,7 +100,7 @@ $total_purchase_val = array_sum(array_column($rows, 'total_purchase_value'));
           <span style="font-family:'DM Mono',monospace;color:var(--accent);font-weight:600"><?= number_format($r['in_stock'], 2) ?></span>
         <?php endif; ?>
       </td>
-      <td style="font-family:'DM Mono',monospace">৳ <?= number_format($r['avg_purchase_rate'], 2) ?></td>
+      <td style="font-family:'DM Mono',monospace">Rs. <?= number_format($r['avg_purchase_rate'], 2) ?></td>
       <td style="font-family:'DM Mono',monospace;color:var(--accent)">Rs. <?= number_format($r['stock_value'], 2) ?></td>
       <td style="font-family:'DM Mono',monospace;color:var(--accent2)">Rs. <?= number_format($r['total_sale_value'], 2) ?></td>
     </tr>
