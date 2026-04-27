@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 $errors=[];$name=$description=$status='';$unit_id=0;
 $units=$conn->query("SELECT id,name,code FROM units_of_measure WHERE status='active' ORDER BY name");
 if ($_SERVER['REQUEST_METHOD']==='POST') {
@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         else $errors[]="DB error.";$stmt->close();
     }
 }
+require_once '../header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Product</div></div>

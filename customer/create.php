@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 $errors=[];
 $name=$description=$status='';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         $stmt->close();
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Customer</div><div class="page-subtitle">Fill in the details below</div></div>

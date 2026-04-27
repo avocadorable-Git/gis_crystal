@@ -171,7 +171,7 @@
 <body>
 
 <header class="topbar">
-    <a href="/gis_crystal/gis_crystal/index.php" class="brand"><span class="brand-dot"></span>GIS Crystal</a>
+    <a href="index.php" class="brand"><span class="brand-dot"></span>GIS Crystal</a>
     <div class="topbar-spacer"></div>
     <span class="topbar-chip">General Inventory System</span>
 </header>
