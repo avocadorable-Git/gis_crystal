@@ -5,7 +5,7 @@ $result = $conn->query("SELECT * FROM customers ORDER BY id DESC");
 ?>
 
 <div class="page-header">
-  <div><div class="page-title">Customer\s</div><div class="page-subtitle">All records</div></div>
+  <div><div class="page-title">Customers</div><div class="page-subtitle">All records</div></div>
   <a href="create.php" class="btn btn-primary"><i class="bi bi-plus-lg"></i>Add New</a>
 </div>
 <div class="card">

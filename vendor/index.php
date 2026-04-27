@@ -4,7 +4,7 @@ require_once '../includes/header.php';
 $result = $conn->query("SELECT * FROM vendors ORDER BY id DESC");
 ?>
 <div class="page-header">
-  <div><div class="page-title">Vendor\s</div><div class="page-subtitle">All records</div></div>
+  <div><div class="page-title">Vendors</div><div class="page-subtitle">All records</div></div>
   <a href="create.php" class="btn btn-primary"><i class="bi bi-plus-lg"></i>Add New</a>
 </div>
 <div class="card">
