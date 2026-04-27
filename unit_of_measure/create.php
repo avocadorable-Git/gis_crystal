@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 $errors=[];$name=$code=$description=$status='';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
     $name=trim($_POST['name']??'');$code=strtoupper(trim($_POST['code']??''));
@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         else $errors[]="DB error.";$stmt->close();
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">New Unit of Measure</div></div>

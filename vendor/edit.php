@@ -1,6 +1,6 @@
 <?php
 require_once '../config/db.php';
-require_once '../includes/header.php';
+
 $id=intval($_GET['id']??0);
 if ($id<=0){header("Location: index.php");exit;}
 $stmt=$conn->prepare("SELECT * FROM vendors WHERE id=?");
@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         $stmt->close();
     }
 }
+require_once '../includes/header.php';
 ?>
 <div class="page-header">
   <div><div class="page-title">Edit Vendor</div><div class="page-subtitle">ID #<?= $id ?></div></div>
